@@ -160,14 +160,15 @@ h3 {
 }
 
 /* Main-page */
-.banner {
+.main-page {
   background: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
     url(./images/main-bcg.jpeg) center/cover no-repeat fixed;
   width: 100%;
-  overflow-x: hidden;
+  position: relative;
+  overflow-x: hidden; /* To prevent scrolling */
 }
 
-.main {
+.navigation {
   min-height: 100vh;
   z-index: 1;
 }
@@ -531,24 +532,18 @@ h3 {
   background: var(--color-grey-lighter2);
 }
 
-.info-section {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  width: 100%;
+.adress{
+  margin-top:10px;
+  margin-left:10px;
+  display:inline-block;
 }
-
-.single-info {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+.adress2{
+margin-top:10px;
+  margin-left: 20px;
 }
-
-.contact-icon {
-  margin-right: 1rem;
+.adress3{
+    margin-left: 20px;
 }
-
 input[type="text"] {
   height: 40px;
   padding-left: 1rem;
@@ -557,7 +552,6 @@ input[type="text"] {
   background-color: var(--color-grey-lighter2);
   border: none;
 }
-
 input[type="email"] {
   height: 40px;
   padding-left: 1rem;
@@ -566,7 +560,6 @@ input[type="email"] {
   background-color: var(--color-grey-lighter2);
   border: none;
 }
-
 textarea {
   height: 100px;
   padding: 12px 20px;
@@ -575,22 +568,12 @@ textarea {
   border: none;
   resize: none;
 }
-
 textarea {
   background-color: var(--color-grey-lighter2);
 }
-
 textarea::placeholder {
   font-size: 15px;
   letter-spacing: var(--spacing);
-}
-
-.single-info2 {
-  margin-bottom: 1rem;
-}
-
-.email-info {
-  margin-bottom: 1rem;
 }
 
 .contact-form {
@@ -604,6 +587,7 @@ textarea::placeholder {
   background: var(--color-white);
   border: 1px solid green;
   border-bottom: none;
+  min-width: 300px;
 }
 form {
   display: flex;
@@ -643,7 +627,7 @@ form {
   }
   .info-section {
     width: 400px;
-    gap: 1rem;
+    gap: 3rem;
   }
 }
 /* Footer */
@@ -665,5 +649,12 @@ form {
 }
 .footer-text {
   text-align: center;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
   color: var(--color-white);
 }
+.company{
+  color: var(--color-primary);
+}
+/* End of footer */
